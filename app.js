@@ -12,8 +12,9 @@ client.on('message', (msg) => {
         msg.channel.send('test');
     }
     if (msg.content.startsWith('!프로필')) {
-        Profile.makeEmbed(msg.author.username, msg.author.id, msg.author.avatarURL); // 함수 호출로 임베드 생성
+        Profile.makeEmbed(msg.author.username, msg.author.id, client.user.avatarURL); // 함수 호출로 임베드 생성
         msg.reply(Profile.embed);
+        msg.reply(msg.author.displayAvatarURL);
     }
 });
 client.login(Token.token);

@@ -10,7 +10,7 @@ exports.makeEmbed = function (userName, userId, avatarUrl) {
             value: userId,
             inline: true,
         })
-        .setThumbnail(avatarUrl);
+        .setImage(avatarUrl);
 
     /*
         .setTitle(userName)
