@@ -10,7 +10,6 @@ client.on('ready', () => {
 client.on('message', (msg) => {
     if (msg.content.startsWith('!명령어')) {
         msg.channel.send('test');
-        msg.react('d');
     }
     if (msg.content.startsWith('!프로필')) {
         Profile.makeEmbed(msg.author.username, msg.author.id, msg.author.avatarURL); // 함수 호출로 임베드 생성
